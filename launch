@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # midi connect
-( /bin/sleep 2; /usr/bin/aconnect 24:0 128:0; ) &
+( /bin/sleep 10; /usr/bin/aconnect 24:0 128:0; /usr/bin/aconnect 128:2 24:0; ) &
 
 # gba serial watcher
 ./gba-sync-serial.py &
@@ -14,7 +14,7 @@ else
   guiflag=""
 fi
 
-/usr/bin/pd $guiflag _main.pd &
+/usr/bin/pd $guiflag -alsamidi -mididev 0,1 _main.pd &
 pdpid=$!
 
 # trap exit and kill daemons

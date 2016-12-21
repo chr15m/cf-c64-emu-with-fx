@@ -10,15 +10,6 @@ rate: 44100
 callback: 0
 blocksize: 64
 nomidiin: False
-midiindev1: 0
-midiindevname1: ALSA MIDI device #1
-midiindev2: 1
-midiindevname2: ALSA MIDI device #2
-nomidiout: False
-midioutdev1: 0
-midioutdevname1: ALSA MIDI device #1
-midioutdev2: 1
-midioutdevname2: ALSA MIDI device #2
 npath: 0
 standardpath: 1
 verbose: 0

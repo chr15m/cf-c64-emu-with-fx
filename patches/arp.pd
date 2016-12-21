@@ -1,4 +1,4 @@
-#N canvas 1106 50 450 680 10;
+#N canvas 1105 47 450 680 10;
 #X declare -path lib/rjlib/rj;
 #X obj 202 83 expr 60000 / $f1;
 #X obj 300 150 / 12;
@@ -64,12 +64,11 @@
 #X obj 12 162 u_dispatch \$0 waveform;
 #X obj 12 140 u_dispatch \$0 cutoff;
 #X floatatom 337 281 5 0 0 0 - - -, f 5;
-#X obj 54 223 print;
 #X obj 306 478 loadbang;
 #X obj 205 193 metro 42;
 #X msg 306 500 127;
 #X connect 0 0 1 0;
-#X connect 1 0 40 1;
+#X connect 1 0 39 1;
 #X connect 2 0 3 0;
 #X connect 2 0 4 0;
 #X connect 3 0 2 1;
@@ -82,7 +81,7 @@
 #X connect 9 1 6 1;
 #X connect 10 0 15 0;
 #X connect 11 0 33 0;
-#X connect 12 0 40 0;
+#X connect 12 0 39 0;
 #X connect 12 1 8 1;
 #X connect 12 2 5 0;
 #X connect 13 0 4 1;
@@ -100,7 +99,6 @@
 #X connect 22 1 1 1;
 #X connect 23 0 22 0;
 #X connect 25 0 27 0;
-#X connect 25 0 38 0;
 #X connect 27 0 29 0;
 #X connect 28 0 0 0;
 #X connect 29 0 31 0;
@@ -110,6 +108,6 @@
 #X connect 33 0 17 0;
 #X connect 34 0 20 0;
 #X connect 36 0 35 0;
-#X connect 39 0 41 0;
-#X connect 40 0 2 0;
-#X connect 41 0 20 0;
+#X connect 38 0 40 0;
+#X connect 39 0 2 0;
+#X connect 40 0 20 0;
