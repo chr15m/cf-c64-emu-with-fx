@@ -1,0 +1,3 @@
+#!/bin/sh
+
+rsync -avz ./ pi@spaceghost.local:~/c64-emu-with-fx

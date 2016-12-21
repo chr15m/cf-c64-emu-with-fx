@@ -1,0 +1,4 @@
+#N canvas 96 158 450 300 10;
+#X obj 12 9 ctlin;
+#X obj 12 31 s arp-cutoff;
+#X connect 0 0 1 0;

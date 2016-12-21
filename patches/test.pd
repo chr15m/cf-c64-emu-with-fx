@@ -1,0 +1,5 @@
+#N canvas 1198 133 450 300 10;
+#X obj 28 258 dac~;
+#X obj 27 15 adc~;
+#X text 24 41 ^ hardware connected;
+#X connect 1 1 0 1;

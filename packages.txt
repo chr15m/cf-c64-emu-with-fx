@@ -1,0 +1,1 @@
+sudo apt-get install puredata pd-freeverb pd-hid pd-wiimote python-rpi.gpio python-serial

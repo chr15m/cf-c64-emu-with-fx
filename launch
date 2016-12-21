@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# midi connect
+( /bin/sleep 2; /usr/bin/aconnect 24:0 128:0; ) &
+
+# gba serial watcher
+./gba-sync-serial.py &
+gbapid=$!
+
+if [ "$1" != "--gui" ]
+then
+  guiflag="-nogui"
+else
+  guiflag=""
+fi
+
+/usr/bin/pd $guiflag _main.pd &
+pdpid=$!
+
+# trap exit and kill daemons
+trap "kill $pdpid; kill $gbapid; trap - SIGTERM; exit" SIGTERM SIGINT EXIT
+
+wait "$pdpid"

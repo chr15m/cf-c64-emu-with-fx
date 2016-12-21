@@ -1,0 +1,5 @@
+#N canvas 912 285 450 300 10;
+#N canvas 442 309 450 300 hum 1;
+#X obj 7 276 outlet~;
+#X obj 9 11 loadbang;
+#X restore 297 31 pd hum;

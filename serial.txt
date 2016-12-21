@@ -1,0 +1,11 @@
+end of /boot/cmline.txt:
+bcm2708.uart_clock=3000000
+
+end of /boot/config.txt:
+init_uart_clock=2441406
+init_uart_baud=38400
+
+# ALT:
+init_uart_clock=2441000
+init_uart_baud=38400
+dtparam=uart0_clkrate=3000000

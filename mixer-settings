@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mix="amixer -c1 -q set"
+$mix "PCM Capture Source" "Line"
+$mix "Mic" 50% unmute
