@@ -1,0 +1,24 @@
+http://spellfoundry.com/2016/05/29/configuring-gpio-serial-port-raspbian-jessie-including-pi-3/
+
+/boot/cmline.txt
+remove console=serial0,115200
+add bcm2708.uart_clock=3000000
+
+end of /boot/config.txt:
+init_uart_clock=2441406
+init_uart_baud=38400
+enable_uart=1
+
+
+Screen blanking:
+/etc/kbd/config
+BLANK_TIME=0
+POWERDOWN_TIME=0
+
+
+
+
+# ALT:
+init_uart_clock=2441000
+init_uart_baud=38400
+dtparam=uart0_clkrate=3000000
