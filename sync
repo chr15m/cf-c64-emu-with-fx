@@ -5,5 +5,5 @@ then
   echo "`basename $0` IP-OR-HOST"
   echo "e.g. spaceghost.local"
 else
-  rsync -avz ./ pi@$1:~/c64-emu-with-fx
+  rsync -avz --exclude='.git/' ./ pi@$1:~/c64-emu-with-fx
 fi
