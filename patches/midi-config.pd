@@ -1,4 +1,4 @@
-#N canvas 191 48 1035 933 10;
+#N canvas 190 47 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -78,7 +78,7 @@
 #X connect 23 1 25 0;
 #X connect 23 2 26 0;
 #X restore 389 304 pd snatcher;
-#N canvas 1038 276 450 300 acid-mapper 0;
+#N canvas 1036 264 450 300 acid-mapper 0;
 #X obj 14 16 g_midi_slider mix/acid/5/param-2-pre;
 #X obj 14 96 g_midi_button mix/acid/5/rez-set;
 #X obj 14 51 g_midi_slider fx-2/distortion;
@@ -91,7 +91,7 @@
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
 #X restore 874 142 pd acid-mapper;
-#N canvas 483 415 450 300 fx-2-mapper 0;
+#N canvas 482 409 450 300 fx-2-mapper 0;
 #X obj 28 24 g_midi_slider fx-2/fx-1-pre;
 #X obj 28 56 g_midi_slider fx-2/fx-2-pre;
 #X text 233 25 fx-2/fx-1-pre;
@@ -187,6 +187,9 @@
 #X obj 187 788 midi-mapper-button 55 56;
 #X msg 187 810 \; arp-loop/snatch-enable \$2;
 #X obj 28 788 midi-mapper-ctl 7 8;
+#X msg 348 461 \; MIDIBUS ctlin 127 70 1 \;;
+#X obj 348 416 loadbang;
+#X obj 348 438 delay 1;
 #X connect 20 0 21 0;
 #X connect 25 0 26 0;
 #X connect 26 0 27 0;
@@ -226,3 +229,5 @@
 #X connect 88 0 57 0;
 #X connect 91 0 92 0;
 #X connect 93 0 60 0;
+#X connect 95 0 96 0;
+#X connect 96 0 94 0;
