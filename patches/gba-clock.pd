@@ -1,4 +1,4 @@
-#N canvas 447 321 482 544 10;
+#N canvas 446 315 482 544 10;
 #X obj 155 136 delay 30000;
 #N canvas 2 50 471 594 old-sync 0;
 #X obj 12 32 route 0xe6;
@@ -91,10 +91,11 @@
 #X obj 302 142 s gba-sync;
 #X obj 135 76 t b b b b b b;
 #X obj 257 45 r sync-button;
-#X obj 345 93 delay 1000;
-#X msg 345 115 1;
-#X msg 310 108 0;
+#X obj 342 93 delay 1000;
+#X msg 342 115 1;
+#X msg 308 93 0;
 #X obj 257 67 t b b b b b b b;
+#X obj 409 67 * 2;
 #X connect 0 0 21 0;
 #X connect 2 0 3 0;
 #X connect 3 0 5 0;
@@ -102,7 +103,7 @@
 #X connect 5 0 9 0;
 #X connect 6 0 8 0;
 #X connect 6 0 18 1;
-#X connect 6 0 29 1;
+#X connect 6 0 33 0;
 #X connect 7 0 15 0;
 #X connect 8 0 7 0;
 #X connect 9 0 4 0;
@@ -137,3 +138,4 @@
 #X connect 32 4 31 0;
 #X connect 32 5 29 0;
 #X connect 32 6 11 0;
+#X connect 33 0 29 1;

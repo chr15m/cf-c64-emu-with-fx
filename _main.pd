@@ -1,5 +1,5 @@
-#N struct 1013-f float x;
-#N canvas 618 54 886 494 10;
+#N struct 1009-f float x;
+#N canvas 617 48 886 494 10;
 #X declare -path lib/rjlib/rj;
 #X declare -path ./patches;
 #X declare -path ./patches/lib;
