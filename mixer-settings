@@ -1,5 +1,9 @@
 #!/bin/sh
 
-mix="amixer -c1 -q set"
-$mix "PCM Capture Source" "Line"
-$mix "Mic" 95% unmute
+for c in `seq 2`
+do
+  echo "Audio settings - trying card $c";
+  mix="amixer -c$c -q set"
+  $mix "PCM Capture Source" "Line"
+  $mix "Mic" 95% unmute
+done
