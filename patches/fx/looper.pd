@@ -1,4 +1,4 @@
-#N canvas 115 203 967 321 10;
+#N canvas 114 197 967 321 10;
 #X obj 12 13 inlet~;
 #X obj 13 276 outlet~;
 #X obj 687 10 r \$1;
@@ -35,7 +35,6 @@
 #X obj 459 277 outlet~;
 #X obj 154 249 r \$0/stop;
 #X obj 154 271 print arp-loop-stop;
-#X obj 194 186 print arp-loop-start;
 #X obj 261 152 print arp-loop-continue;
 #X msg 111 36 stop \, bang;
 #X obj 261 85 / 1000;
@@ -53,17 +52,16 @@
 #X connect 9 0 10 0;
 #X connect 10 0 7 0;
 #X connect 11 0 7 0;
-#X connect 11 0 36 0;
 #X connect 13 0 6 1;
 #X connect 14 0 15 0;
 #X connect 15 0 11 1;
-#X connect 16 0 39 0;
+#X connect 16 0 38 0;
 #X connect 17 0 20 0;
 #X connect 18 0 17 1;
 #X connect 19 0 18 0;
 #X connect 20 0 7 0;
-#X connect 20 0 37 0;
-#X connect 22 0 38 0;
+#X connect 20 0 36 0;
+#X connect 22 0 37 0;
 #X connect 23 0 16 0;
 #X connect 24 0 5 0;
 #X connect 25 0 8 0;
@@ -73,5 +71,5 @@
 #X connect 29 0 16 1;
 #X connect 30 0 12 0;
 #X connect 34 0 35 0;
-#X connect 38 0 11 0;
-#X connect 39 0 17 0;
+#X connect 37 0 11 0;
+#X connect 38 0 17 0;
