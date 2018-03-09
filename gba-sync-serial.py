@@ -4,7 +4,8 @@ import serial
 import socket
 from sys import argv
 
-ser = serial.Serial('/dev/serial0', baudrate=38400)    
+# ser = serial.Serial('/dev/serial0', baudrate=38400)
+ser = serial.Serial('/dev/serial0', baudrate=31250)
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 print "Connected:", ser

@@ -1,15 +1,24 @@
 audioapi: 1
 noaudioin: False
-audioindev1: 2 2
+audioindev1: 4 2
 audioindevname1: USB Sound Device (hardware)
 noaudioout: False
-audiooutdev1: 2 6
+audiooutdev1: 4 6
 audiooutdevname1: USB Sound Device (hardware)
-audiobuf: 25
+audiobuf: 15
 rate: 44100
 callback: 0
 blocksize: 64
 nomidiin: False
+midiindev1: 0
+midiindevname1: ALSA MIDI device #1
+midiindev2: 0
+midiindevname2: ALSA MIDI device #1
+nomidiout: False
+midioutdev1: 0
+midioutdevname1: ALSA MIDI device #1
+midioutdev2: 0
+midioutdevname2: ALSA MIDI device #1
 npath: 0
 standardpath: 1
 verbose: 0

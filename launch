@@ -16,7 +16,8 @@
 ) &
 
 # gba serial watcher
-./gba-sync-serial.py &
+#./gba-sync-serial.py &
+./trigger-high-sync.py &
 gbapid=$!
 
 if [ "$1" != "--gui" ]
