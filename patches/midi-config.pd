@@ -1,4 +1,4 @@
-#N canvas 189 47 1035 933 10;
+#N canvas 188 47 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -193,6 +193,8 @@
 #X obj 575 359 ctlin 41 1;
 #X obj 575 381 sel 127;
 #X obj 575 403 s sync-button;
+#X obj 568 444 r fx-1/down-pre;
+#X obj 568 466 print;
 #X connect 20 0 21 0;
 #X connect 25 0 26 0;
 #X connect 26 0 27 0;
@@ -236,3 +238,4 @@
 #X connect 96 0 94 0;
 #X connect 97 0 98 0;
 #X connect 98 0 99 0;
+#X connect 100 0 101 0;
