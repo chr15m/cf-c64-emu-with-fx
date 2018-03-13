@@ -1,5 +1,7 @@
 #!/bin/bash
 
+pd=`command -v pd || command -v /usr/bin/pd || command -v /usr/local/bin/pd`
+
 # mixer bash
 ./mixer-settings
 
@@ -34,7 +36,7 @@ else
   recordflag=""
 fi
 
-/usr/bin/pd $guiflag -alsamidi -mididev 0,1 "$recordflag" -open _main.pd &
+$pd $guiflag -alsamidi -mididev 0,1 "$recordflag" -open _main.pd &
 pdpid=$!
 
 # trap exit and kill daemons
