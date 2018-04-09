@@ -1,5 +1,5 @@
 #N struct 1013-f float x;
-#N canvas 576 78 886 494 10;
+#N canvas 575 72 886 494 10;
 #X declare -path lib/rjlib/rj;
 #X declare -path ./patches;
 #X declare -path ./patches/lib;
@@ -84,7 +84,7 @@
 ;
 #X obj 16 189 key-map key_q lowpass key_w bandpass key_e hipass;
 #X obj 16 242 key-map key_i volume key_o ringmod;
-#N canvas 118 382 450 463 process-octave 0;
+#N canvas 117 376 450 463 process-octave 0;
 #X obj 13 11 inlet;
 #X obj 13 33 unpack f f;
 #X obj 80 58 > 0;
@@ -155,7 +155,7 @@
 #X restore 801 405 pd keyboard;
 #X obj 829 382 hidkeys;
 #X obj 459 35 arp;
-#N canvas 335 79 450 631 arp-data 0;
+#N canvas 334 73 450 631 arp-data 0;
 #X obj 15 546 outlet;
 #X obj 15 12 r \$0/notes;
 #X text 44 194 add rootnote;
