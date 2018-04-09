@@ -1,4 +1,4 @@
-#N canvas 910 287 490 313 10;
+#N canvas 907 269 490 313 10;
 #X declare -path ../../s-abstractions/trunk;
 #X declare -path ../../s-abstractions;
 #X declare -path ../../lolPd;
@@ -17,8 +17,9 @@
 #X msg 80 35 0;
 #X obj 325 94 r fx-1/down-pre;
 #X obj 325 116 / 127;
-#X obj 325 138 s fx-1/down;
+#X obj 325 160 s fx-1/down;
 #X obj 274 50 magic-freq-converter fx-1;
+#X obj 325 138 == 0;
 #X connect 0 0 4 0;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;
@@ -34,4 +35,5 @@
 #X connect 10 0 11 0;
 #X connect 11 0 4 1;
 #X connect 12 0 13 0;
-#X connect 13 0 14 0;
+#X connect 13 0 16 0;
+#X connect 16 0 14 0;

@@ -1,10 +1,8 @@
-arp-cutoff/slider 0 18;
-arp-loop/volume/slider 7 1;
-arp-reverb/slider 18 1;
 arp-tuning/slider 19 1;
+arp-reverb/slider 18 1;
 fx-1/volume/slider 5 1;
 arp-cutoff/slider 23 1;
-fx-1/down-pre/toggle 70 1;
+fx-1/down-pre/toggle 69 1;
 fx-1/select/slider 6 1;
 arp-loop/toggle 71 1;
 fx-2/fx-2-pre/slider;
