@@ -1,4 +1,4 @@
-#N canvas 314 307 482 555 10;
+#N canvas 311 289 482 555 10;
 #X obj 125 166 delay 30000;
 #X obj 220 173 timer;
 #X floatatom 220 195 5 0 0 0 - - -, f 5;
@@ -35,7 +35,7 @@
 #X obj 287 7 r sync-button;
 #X obj 287 31 print sync-button-trigger;
 #X obj 105 27 t a a;
-#N canvas 2 50 450 300 printer 0;
+#N canvas 2 47 450 300 printer 0;
 #X obj 15 10 inlet;
 #X obj 15 32 t b b;
 #X obj 15 54 timer;
@@ -96,7 +96,6 @@
 #X connect 32 0 28 1;
 #X connect 33 0 34 0;
 #X connect 35 0 19 0;
-#X connect 35 1 36 0;
 #X connect 37 1 4 0;
 #X connect 38 0 39 0;
 #X connect 39 0 42 0;
