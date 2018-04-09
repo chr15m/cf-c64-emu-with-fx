@@ -1,4 +1,4 @@
-#N canvas 275 60 1035 933 10;
+#N canvas 273 48 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -147,7 +147,7 @@
 #X obj 225 375 g_midi_toggle fx-1/loop;
 #X text 218 355 fx-1/loop;
 #X msg 39 416 \; fx-1/fx-pre-\$1 \$2;
-#N canvas 688 696 987 300 acid-control 0;
+#N canvas 686 684 987 300 acid-control 0;
 #X obj 774 242 s acid/globaloctave;
 #X obj 34 86 hsl 128 15 0 127 0 1 acid/rez empty acid/rez -2 -8 0 10
 -262144 -1 -1 1000 1;
@@ -160,29 +160,29 @@
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 115 33 hradio 15 1 0 2 acid/wave acid/wave/set sqr/saw 0 -8
 0 10 -262144 -1 -1 1;
-#X msg 519 231 \; acid/seed \$1 \; acid/makenew bang \;;
-#X obj 365 154 s acid/tick;
+#X msg 477 192 \; acid/seed \$1 \; acid/makenew bang \;;
+#X obj 340 158 s acid/tick;
 #X obj 32 33 hsl 64 15 1 20 0 1 acid/distortion empty distortion -2
 -8 0 10 -262144 -1 -1 0 1;
-#X obj 365 7 r clock/subtick;
-#X obj 365 29 / 48;
-#X obj 365 51 int;
-#X obj 365 73 change;
+#X obj 340 11 r clock/subtick;
+#X obj 340 33 / 48;
+#X obj 340 55 int;
+#X obj 340 77 change;
 #X obj 767 32 g_midi_slider acid/volume;
-#X msg 519 54 bang;
-#X obj 519 185 t a a;
-#X obj 551 208 print SEED;
-#X obj 519 111 timer;
+#X msg 477 15 bang;
+#X obj 477 146 t a a;
+#X obj 509 169 print SEED;
+#X obj 477 72 timer;
 #X text 764 14 acid/volume;
 #X obj 767 85 g_midi_slider acid/cutoff;
 #X text 765 66 acid/cutoff;
-#X obj 519 76 t b b;
-#X obj 519 133 * 10;
-#X obj 519 158 mod 100000;
-#X obj 365 119 f;
-#X obj 395 119 + 1;
-#X msg 365 95 bang;
-#X msg 430 83 0;
+#X obj 477 37 t b b;
+#X obj 477 94 * 10;
+#X obj 477 119 mod 100000;
+#X obj 340 123 f;
+#X obj 370 123 + 1;
+#X msg 340 99 bang;
+#X msg 405 87 0;
 #X text 86 260 volume;
 #X text 27 242 fx;
 #X text 236 43 LOOPING;
