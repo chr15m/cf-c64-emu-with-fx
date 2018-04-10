@@ -1,6 +1,9 @@
+acid/octave-or-rate/button 52 1;
+acid/octaverate/pre/slider 4 1;
+acid/new/button 67 1;
 arp/tuning/pre/toggle 66 1;
-acid/cutoff/slider 19 1;
-acid/volume/slider 3 1;
+acid/controls/pre/slider 20 1;
+acid/cutoff/pre/slider 19 1;
 fx-1/loop/toggle 70 1;
 arp-reverb/slider 18 1;
 fx-1/volume/slider 5 1;
