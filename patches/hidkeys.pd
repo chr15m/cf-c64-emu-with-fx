@@ -1,4 +1,4 @@
-#N canvas 751 465 450 300 10;
+#N canvas 545 654 450 300 10;
 #X obj 9 96 hid 0;
 #X obj 9 10 loadbang;
 #X obj 9 118 route key;
@@ -6,7 +6,7 @@
 #X obj 9 140 t a a;
 #X obj 41 164 print keyboard;
 #X msg 194 45 open 0x04d9 0x1203 \, 10;
-#X msg 9 32 open 1 \, 10;
+#X msg 9 32 open 0 \, 10;
 #X connect 0 0 2 0;
 #X connect 1 0 7 0;
 #X connect 2 0 4 0;
