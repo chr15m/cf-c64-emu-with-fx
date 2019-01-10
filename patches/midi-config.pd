@@ -1,4 +1,4 @@
-#N canvas 271 47 1035 933 10;
+#N canvas 270 47 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -147,15 +147,15 @@
 #X obj 225 375 g_midi_toggle fx-1/loop;
 #X text 218 355 fx-1/loop;
 #X msg 39 416 \; fx-1/fx-pre-\$1 \$2;
-#N canvas 548 220 1133 689 acid-control 1;
+#N canvas 548 220 1133 689 acid-control 0;
 #X obj 34 86 hsl 128 15 0 127 0 1 acid/rez empty acid/rez -2 -8 0 10
 -262144 -1 -1 1000 1;
 #X obj 35 151 hsl 128 15 0 300 0 0 acid/decay acid/decay/set acid/decay
--2 -8 0 10 -262144 -1 -1 5588 1;
+-2 -8 0 10 -262144 -1 -1 6562 1;
 #X obj 35 121 hsl 128 15 0 1 0 0 acid/swing acid/swing/set acid/swing
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 115 33 hradio 15 1 0 2 acid/wave acid/wave/set sqr/saw 0 -8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 1;
 #X msg 583 282 \; acid/seed \$1 \; acid/makenew bang \;;
 #X obj 212 208 s acid/tick;
 #X obj 32 33 hsl 64 15 1 20 0 1 acid/distortion empty distortion -2
@@ -312,6 +312,11 @@
 #X msg 187 773 \; acid/snatch-enable \$2;
 #X msg 407 774 \; acid/fx-1 \$2;
 #X obj 407 752 midi-mapper-button 35 36;
+#X text 576 346 fx/mini;
+#X obj 579 372 g_midi_button fx-mini/button/left;
+#X obj 579 408 g_midi_button fx-mini/button/right;
+#X obj 669 372 g_midi_slider fx-mini/knob/left;
+#X obj 670 408 g_midi_slider fx-mini/knob/right;
 #X connect 18 0 19 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;

@@ -1,7 +1,11 @@
+fx-mini/knob/right/slider 17 1;
+fx-mini/knob/left/slider 16 1;
+fx-mini/button/right/button 65 1;
+fx-mini/button/left/button 64 1;
+arp/tuning/pre/toggle 66 1;
 acid/octave-or-rate/button 52 1;
 acid/octaverate/pre/slider 4 1;
 acid/new/button 67 1;
-arp/tuning/pre/toggle 66 1;
 acid/controls/pre/slider 20 1;
 acid/cutoff/pre/slider 19 1;
 fx-1/loop/toggle 70 1;
