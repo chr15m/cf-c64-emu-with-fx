@@ -27,6 +27,7 @@ then
   guiflag="-nogui"
 else
   guiflag=""
+  shift
 fi
 
 if [ "$1" == "--record" ]
