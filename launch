@@ -7,6 +7,7 @@ pd=`command -v pd || command -v /usr/bin/pd || command -v /usr/local/bin/pd`
 
 # midi connect
 ( /bin/sleep 10; 
+  ./korg-led-extrnal-mode.sh
   /usr/bin/aconnect nanoKONTROL2:0 "Pure Data":0
   /usr/bin/aconnect "Pure Data":2 nanoKONTROL2:0
   /usr/bin/aconnect Nooder-1:0 "Pure Data":1
