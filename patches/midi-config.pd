@@ -1,4 +1,4 @@
-#N canvas 268 53 1035 933 10;
+#N canvas 254 53 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -147,15 +147,15 @@
 #X obj 225 375 g_midi_toggle fx-1/loop;
 #X text 218 355 fx-1/loop;
 #X msg 39 416 \; fx-1/fx-pre-\$1 \$2;
-#N canvas 548 220 1133 689 acid-control 0;
+#N canvas 546 220 1133 689 acid-control 0;
 #X obj 34 86 hsl 128 15 0 127 0 1 acid/rez empty acid/rez -2 -8 0 10
 -262144 -1 -1 1000 1;
 #X obj 35 151 hsl 128 15 0 300 0 0 acid/decay acid/decay/set acid/decay
--2 -8 0 10 -262144 -1 -1 7662 1;
+-2 -8 0 10 -262144 -1 -1 6562 1;
 #X obj 35 121 hsl 128 15 0 1 0 0 acid/swing acid/swing/set acid/swing
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 115 33 hradio 15 1 0 2 acid/wave acid/wave/set sqr/saw 0 -8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 1;
 #X msg 583 282 \; acid/seed \$1 \; acid/makenew bang \;;
 #X obj 212 208 s acid/tick;
 #X obj 32 33 hsl 64 15 1 20 0 1 acid/distortion empty distortion -2
@@ -300,7 +300,7 @@
 #X connect 85 1 82 0;
 #X connect 85 2 66 1;
 #X connect 86 0 83 0;
-#X restore 390 398 pd acid-control;
+#X restore 394 358 pd acid-control;
 #X obj 816 732 g_midi_toggle arp/tuning/pre;
 #X obj 814 767 r arp/tuning/pre;
 #X obj 814 811 s arp-tuning;
@@ -326,6 +326,10 @@
 #X obj 899 236 s record;
 #X obj 900 318 ctlout 45 1;
 #X text 897 145 record button;
+#X msg 351 429 \; fx-1/fx-pre-1 1 \; fx-1/fx-pre-1 64 \; fx-1/fx-pre-2
+1 \; fx-1/fx-pre-2 64 \; fx-1/down-pre 1 \; fx-1/down-pre 0 \;;
+#X obj 351 404 loadbang;
+#X text 418 404 start fx on;
 #X connect 18 0 19 0;
 #X connect 23 0 24 0;
 #X connect 24 0 25 0;
@@ -368,3 +372,4 @@
 #X connect 100 0 104 0;
 #X connect 101 0 102 0;
 #X connect 102 0 103 0;
+#X connect 107 0 106 0;
