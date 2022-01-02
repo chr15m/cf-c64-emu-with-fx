@@ -10,7 +10,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 debug = "--debug" in argv
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(15, GPIO.IN)
+GPIO.setup(15, GPIO.IN, GPIO.PUD_DOWN)
 
 def makecallback(hello):
   def got(*args, **kwargs):
