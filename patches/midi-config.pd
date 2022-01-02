@@ -1,4 +1,4 @@
-#N canvas 254 53 1035 933 10;
+#N canvas 252 53 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -21,7 +21,7 @@
 #X obj 169 19 g_midi_settings;
 #X obj 169 85 g_midi_toggle CYCLE;
 #X text 256 90 CYCLE;
-#N canvas 1080 290 551 445 snatcher 0;
+#N canvas 1078 290 551 539 snatcher 0;
 #X obj 37 47 hradio 15 1 0 5 empty empty empty 0 -8 0 10 -262144 -1
 -1 0;
 #X obj 37 67 - 1;
@@ -46,10 +46,12 @@
 #X obj 36 257 - 1;
 #X obj 36 285 fx-looper CYCLE;
 #X obj 36 127 s-midictl 60;
-#X obj 36 318 t a a a;
 #X msg 36 388 \; left/snatch \$1 \;;
 #X msg 156 388 \; right/snatch \$1 \;;
 #X msg 286 388 \; arp/snatch \$1 \;;
+#X msg 36 428 \; arp-loop/snatch \$1 \;;
+#X obj 36 318 t a a a a a;
+#X msg 36 468 \; acid/snatch \$1 \;;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 3 0 9 0;
@@ -72,11 +74,13 @@
 #X connect 18 0 15 0;
 #X connect 19 0 20 0;
 #X connect 20 0 21 0;
-#X connect 21 0 23 0;
+#X connect 21 0 27 0;
 #X connect 22 0 16 0;
-#X connect 23 0 24 0;
-#X connect 23 1 25 0;
-#X connect 23 2 26 0;
+#X connect 27 0 23 0;
+#X connect 27 1 24 0;
+#X connect 27 2 25 0;
+#X connect 27 3 26 0;
+#X connect 27 4 28 0;
 #X restore 394 324 pd snatcher;
 #X obj 770 22 declare -path ./patches/lib/lolPd;
 #X obj 749 44 declare -path ./patches/lib/list-abs;
