@@ -1,4 +1,4 @@
-#N canvas 252 53 1035 933 10;
+#N canvas 250 53 1035 933 10;
 #X declare -path ./patches/lib/lolPd;
 #X declare -path ./patches/lib/list-abs;
 #X declare -path ./patches/lib/s-abstractions/trunk;
@@ -151,19 +151,19 @@
 #X obj 225 375 g_midi_toggle fx-1/loop;
 #X text 218 355 fx-1/loop;
 #X msg 39 416 \; fx-1/fx-pre-\$1 \$2;
-#N canvas 546 220 1133 689 acid-control 0;
+#N canvas 542 220 1133 689 acid-control 1;
 #X obj 34 86 hsl 128 15 0 127 0 1 acid/rez empty acid/rez -2 -8 0 10
 -262144 -1 -1 1000 1;
 #X obj 35 151 hsl 128 15 0 300 0 0 acid/decay acid/decay/set acid/decay
--2 -8 0 10 -262144 -1 -1 6562 1;
+-2 -8 0 10 -262144 -1 -1 5038 1;
 #X obj 35 121 hsl 128 15 0 1 0 0 acid/swing acid/swing/set acid/swing
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 115 33 hradio 15 1 0 2 acid/wave acid/wave/set sqr/saw 0 -8
-0 10 -262144 -1 -1 1;
+0 10 -262144 -1 -1 0;
 #X msg 583 282 \; acid/seed \$1 \; acid/makenew bang \;;
 #X obj 212 208 s acid/tick;
-#X obj 32 33 hsl 64 15 1 20 0 1 acid/distortion empty distortion -2
--8 0 10 -262144 -1 -1 0 1;
+#X obj 32 33 hsl 64 15 1 20 0 1 acid/distortion acid/distortion/r distortion
+-2 -8 0 10 -262144 -1 -1 3316 1;
 #X obj 212 18 r clock/subtick;
 #X obj 212 83 / 48;
 #X obj 212 105 int;
@@ -209,7 +209,7 @@
 #X obj 397 106 list;
 #X obj 253 333 r acid/octaverate/pre;
 #X obj 871 347 r acid/controls/pre;
-#X obj 871 369 s acid/rez;
+#X obj 936 477 s acid/rez;
 #X obj 237 62 * 24;
 #X obj 237 40 r acid/pace;
 #X obj 253 507 fx-looper acid/octaveloop;
@@ -244,6 +244,9 @@
 #X msg 365 482 55;
 #X obj 334 404 t f f f;
 #X obj 310 427 sel 127;
+#X obj 871 369 / 10;
+#X obj 810 514 s acid/distortion/r;
+#X obj 957 412 s acid/multvol;
 #X connect 7 0 8 0;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
@@ -271,7 +274,8 @@
 #X connect 48 1 11 0;
 #X connect 49 0 25 0;
 #X connect 50 0 56 0;
-#X connect 51 0 52 0;
+#X connect 51 0 87 0;
+#X connect 51 0 89 0;
 #X connect 53 0 8 1;
 #X connect 54 0 53 0;
 #X connect 55 0 75 0;
@@ -304,6 +308,8 @@
 #X connect 85 1 82 0;
 #X connect 85 2 66 1;
 #X connect 86 0 83 0;
+#X connect 87 0 52 0;
+#X connect 87 0 88 0;
 #X restore 394 358 pd acid-control;
 #X obj 816 732 g_midi_toggle arp/tuning/pre;
 #X obj 814 767 r arp/tuning/pre;
