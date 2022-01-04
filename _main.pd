@@ -1,5 +1,5 @@
 #N struct 1009-f float x;
-#N canvas 670 72 886 494 10;
+#N canvas 668 72 886 494 10;
 #X declare -path lib/rjlib/rj;
 #X declare -path ./patches;
 #X declare -path ./patches/lib;
@@ -422,6 +422,17 @@ gather ^ done \; list prepend notes \;;
 #X connect 6 0 9 0;
 #X connect 9 0 3 1;
 #X restore 247 201 pd acid/multvol;
+#N canvas 1 53 450 300 README 0;
+#X text 14 17 auto-fx-looper will send a bang when input gets to 127
+;
+#X obj 22 42 r incoming-values;
+#X obj 22 86 fx-looper looper-name;
+#X obj 22 64 auto-fx-looper looper-name;
+#X obj 22 108 s outgoing-values;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 2 0;
+#X restore 754 132 pd README;
 #X connect 0 0 59 0;
 #X connect 0 1 60 0;
 #X connect 1 0 2 0;
