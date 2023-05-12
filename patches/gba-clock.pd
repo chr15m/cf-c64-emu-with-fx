@@ -1,4 +1,4 @@
-#N canvas 307 289 482 602 10;
+#N canvas 899 1240 804 602 10;
 #X obj 125 166 delay 30000;
 #X obj 220 173 timer;
 #X floatatom 220 195 5 0 0 0 - - -, f 5;
@@ -59,6 +59,15 @@
 #X msg 134 467 bang;
 #X obj 134 534 line~;
 #X obj 134 556 s~ clock/tick~;
+#X obj 508 29 netreceive -u 31425;
+#X obj 608 75 s gba-sync;
+#X text 504 10 network based sync;
+#X msg 542 80 0;
+#X obj 508 49 t f b b b b b;
+#X obj 530 121 delay 30000;
+#X msg 530 143 1;
+#X obj 508 189 s clock/tick;
+#X obj 644 137 print netsync;
 #X connect 0 0 20 0;
 #X connect 1 0 2 0;
 #X connect 2 0 37 0;
@@ -116,3 +125,14 @@
 #X connect 47 0 49 0;
 #X connect 48 0 46 0;
 #X connect 49 0 50 0;
+#X connect 51 0 55 0;
+#X connect 54 0 24 1;
+#X connect 55 0 58 0;
+#X connect 55 0 59 0;
+#X connect 55 1 56 0;
+#X connect 55 2 54 0;
+#X connect 55 3 1 0;
+#X connect 55 4 1 1;
+#X connect 55 5 52 0;
+#X connect 56 0 57 0;
+#X connect 57 0 24 1;
