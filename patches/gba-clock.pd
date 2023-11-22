@@ -1,4 +1,4 @@
-#N canvas 899 1240 804 602 10;
+#N canvas 897 1240 804 602 10;
 #X obj 125 166 delay 30000;
 #X obj 220 173 timer;
 #X floatatom 220 195 5 0 0 0 - - -, f 5;
@@ -67,7 +67,6 @@
 #X obj 530 121 delay 30000;
 #X msg 530 143 1;
 #X obj 508 189 s clock/tick;
-#X obj 644 137 print netsync;
 #X connect 0 0 20 0;
 #X connect 1 0 2 0;
 #X connect 2 0 37 0;
@@ -128,7 +127,6 @@
 #X connect 51 0 55 0;
 #X connect 54 0 24 1;
 #X connect 55 0 58 0;
-#X connect 55 0 59 0;
 #X connect 55 1 56 0;
 #X connect 55 2 54 0;
 #X connect 55 3 1 0;
